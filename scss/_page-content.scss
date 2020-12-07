@@ -1,0 +1,159 @@
+/* Articles and subpages - layout */
+.page-content {
+  padding: 20px;
+}
+
+.page-content__inner {
+  max-width: 1240px;
+  margin: 0 auto;
+}
+
+/* Articles and subpages - text */
+.page-content__text {
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+
+  &:not(:first-child) {
+    margin-top: 40px;
+  }
+
+  &:last-child {
+    margin-bottom: 20px;
+  }
+
+  & ul,
+  & ol {
+    padding-left: 40px;
+  }
+
+  & li {
+    margin-bottom: 1em;
+  }
+}
+
+/* Subpages - layout items */
+.page-content__card-list {
+  max-width: 1060px;
+  margin: 40px auto 0 auto;
+}
+
+.page-content__box {
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 40px;
+  
+  &:last-child {
+    margin-bottom: 20px;
+  }
+}
+
+.page-content__map-future {
+  width: 100%;
+  margin-top: 40px;
+}
+
+.page-content__map-past {
+  width: 100%;
+  max-width: 600px;
+  margin-top: 40px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 20px;
+
+  display: none;
+
+  @media screen and (min-width: $bp-medium) {
+    display: block;
+  }
+}
+
+/* Articles - images */
+.page-content__img-horizontal {
+  max-width: 1060px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 40px;
+  
+  &:last-child {
+    margin-bottom: 20px;
+  }
+}
+
+.page-content__img-vertical {
+  max-width: 550px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 40px;
+  
+  &:last-child {
+    margin-bottom: 20px;
+  }
+}
+
+.page-content__img-vertical-wrapper {
+  max-width: 1060px;
+  margin-left: auto;
+  margin-right: auto;
+  
+  @media screen and (min-width: $bp-medium) {
+    display: flex;
+    
+    & .page-content__img-vertical:first-child {
+      margin-right: 20px;
+    }
+  }
+}
+
+/* Articles - navigation links */
+.page-content__navigation {
+  max-width: 1060px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 40px;
+  text-align: center;
+  
+  &:last-child {
+    margin-bottom: 20px;
+  }
+}
+
+/* Articles - comments */
+.page-content__commentbox {
+  width: 100%;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Articles and subpages - fonts */
+.page-content__text p {
+  font-family: $font-default;
+  font-size: 16px;
+  line-height: 1.5;
+
+  &:not(:last-child) {
+    margin-bottom: 1em;
+  }
+}
+
+.page-content__text a {
+  color: $c-secondary;
+}
+
+.page-content__text h2,
+.page-content__text h3 {
+  font-family: $font-title;
+  color: $c-secondary;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+.page-content__text h2 {
+  font-size: 24px;
+}
+
+.page-content__text h3 {
+  font-size: 20px;
+}

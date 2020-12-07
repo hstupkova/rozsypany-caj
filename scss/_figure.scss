@@ -1,0 +1,19 @@
+/* Images with captions in articles */
+.figure {
+  width: 100%;
+  background-color: $c-text-background;
+  box-shadow: $box-shadow;
+
+  & img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+}
+
+.figure__caption {
+  color: $c-secondary;
+  font-size: 14px;
+  text-align: center;
+  padding: 0.5em;
+}

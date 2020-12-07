@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rozsypaný čaj</title>
+    <link rel="stylesheet" type="text/css" href="/css/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Marcellus&family=Merriweather+Sans:ital,wght@0,300;0,700;1,300&display=swap"
+      rel="stylesheet"
+    />
+    <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+    <link
+      rel="alternate"
+      type="application/atom+xml" 
+      title="RSS Feed pro rozsypany-caj.cz" 
+      href="/feed.xml"
+    />
+  </head>
+
+  <body>
+
+    <div class="page">
+
+      <!-- Header -->
+      <header class="header {% if header==='up' %}header--bp-70{% endif %} {% if header==='down' %}header--bp-30{% endif %}" style="background-image: url({{ hero }})">
+
+        <!-- Menu -->
+        <nav class="header__menu">
+          <div class="header__menu-inner" id="header__menu-inner">
+            <a href="/" class="header__menu-link">Domů</a>
+            <a href="/prakticke-rady/" class="header__menu-link">Praktické rady</a>
+            <a href="/minule-cesty/" class="header__menu-link">Minulé cesty</a>
+            <a href="/budouci-cesty/" class="header__menu-link">Budoucí cesty</a>
+            <a href="/o-mne/" class="header__menu-link">O mně</a>
+            <a
+              href="javascript:void(0);"
+              class="header__menu-icon"
+              onclick="openMenu()"
+            >
+              <i class="fas fa-bars"></i>
+            </a>
+          </div>
+        </nav>
+
+        <!-- Title of the page -->
+        <div class="header__title-wrapper">
+          <h1 class="header__title {% if index==='yes' %}header__title--index{% endif %}">{{ title | safe }}</h1>
+          <h2 class="header__subtitle {% if subtitlevisible==='yes' %}header__subtitle--visible{% endif %}">{{ subtitle | safe }}</h2>
+        </div>
+
+        <svg class="header__svg" viewbox="0 0 1000 100" preserveaspectratio="none">
+          <path
+            id="svg_1"
+            d="m0,35 c169,103 481,41 567,23 c86,-18 228,-59 429.5,-57 L1000,0 L1000,100 L0,100 Z"
+            opacity="1"
+            stroke-width="1"
+            stroke="#FFF4E8"
+            fill="#FFF4E8"
+          />
+        </svg>
+      </header>

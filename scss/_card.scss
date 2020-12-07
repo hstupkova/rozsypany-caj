@@ -1,0 +1,28 @@
+/* Cards of articles */
+.card {
+  box-shadow: $box-shadow;
+  background-color: $c-text-background;
+}
+
+.card__img {
+  max-width: 100%;
+  width: auto;
+  height: auto;
+}
+
+.card__text-wrapper {
+  padding: 10px;
+  text-align: center;
+}
+
+.card__title {
+  color: $c-secondary;
+  font-size: 18px;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.card__date {
+  color: $c-secondary;
+  font-size: 14px;
+}

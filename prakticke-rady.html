@@ -1,0 +1,30 @@
+---
+layout: layouts/subpage.njk
+title: Praktické rady
+subtitlevisible: no
+index: no
+hero: /images/rady_hero.jpg
+header: center
+---
+<section class="page-content__text">
+  <p>Každý, kdo se na&nbsp;vlastní pěst chystá odjet do&nbsp;země, kde nikdy předtím nebyl, jistě předem hledá informace o&nbsp;tom, jak to v&nbsp;dané zemi funguje, na&nbsp;co si dát pozor nebo jak různé věci zařídit. Stránek, které jsou praktických rad k&nbsp;cestování po&nbsp;Japonsku plné, je celá řada a&nbsp;sama z&nbsp;nich doteď ráda čerpám (za&nbsp;všechny zmiňme třeba můj oblíbený <a href="https://www.japan-guide.com/">japan guide</a>). Přesto bych chtěla přispět svou troškou do&nbsp;mlýna a&nbsp;zmínit pár věcí, na&nbsp;které třeba není tak snadné narazit.</p>
+</section>
+          
+{% for tip in collections.tips %}
+<section class="page-content__box">
+  <div class="box-horizontal {% if loop.index % 2 === 0 %}box-horizontal--reverse{% endif %}">
+    <div class="box-horizontal__img-wrapper"><a href="{{ tip.url }}">
+      <img
+        src="/images/{{ tip.fileSlug }}_box.jpg"
+        alt="{{ tip.data.title }}"
+        class="box-horizontal__img"
+      /></a>
+    </div>
+    <div class="box-horizontal__text-wrapper">
+      <h2 class="box-horizontal__title"><a href="{{ tip.url }}">{{ tip.data.title }}</a></h2>
+      <p class="box-horizontal__text">{{ tip.data.perex | safe }}</p>
+    </div>
+  </div>
+</section>
+{% endfor %}
+

@@ -1,0 +1,43 @@
+/* Form */
+.form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.form__form-field {
+  margin-bottom: 0.8em;
+}
+
+.form__input,
+.form__textarea {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 0;
+  box-shadow: $box-shadow;
+  background-color: $c-text-background;
+}
+
+.form__textarea {
+  height: 20vh;
+}
+
+.form__label {
+  display: block;
+  font-family: $font-default;
+  font-size: 14px;
+}
+
+.form__required {
+  color: rgb(167, 0, 0);
+}
+
+.form__explanation {
+  font-family: $font-default;
+  font-size: 14px;
+}
+
+.form button {
+  align-self: flex-end;
+}

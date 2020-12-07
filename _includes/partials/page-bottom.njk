@@ -1,0 +1,57 @@
+<!-- Footer -->
+<footer class="footer">
+  <p class="footer__text">
+    &copy; 2020 | <a class="footer__link" href="/o-mne/">Rozsypaný čaj</a> | <a href="/feed.xml" class="footer__link"><i class="fas fa-rss-square"></i></a>
+  </p>
+  <p class="footer__text--small">icons  from <a href="https://fontawesome.com/license" class="footer__link">font awesome</a></p>
+</footer>
+
+</div>
+
+<!-- Script for opening/closing the hamburger menu -->
+<script>
+function openMenu() {
+  var x = document.getElementById("header__menu-inner");
+  if (x.className === "header__menu-inner") {
+    x.className += " header__menu-inner--responsive";
+  } else {
+    x.className = "header__menu-inner";
+  }
+}
+</script>
+
+{% if title==='Minulé cesty' %}
+<!-- Script for displaying label in svg illustration -->
+<script>
+  var towns = document.getElementsByClassName('map-past__town');
+
+  for (var i = 0; i < towns.length; i++) {
+    towns[i].addEventListener('mouseover', mouseOverEffect);
+    towns[i].addEventListener('mouseout', mouseOutEffect);
+  }
+
+  function mouseOverEffect() {
+    var idTown = this.id;
+    var idLabel = idTown + "-label";
+    var label = document.getElementById(idLabel);
+    label.classList.add("map-past__label--visible");
+    var idLabelBackground = idTown + "-label-background";
+    var labelBackground = document.getElementById(idLabelBackground);
+    labelBackground.classList.add("map-past__label-background--visible");
+
+  }
+
+  function mouseOutEffect() {
+    var idTown = this.id;
+    var idLabel = idTown + "-label";
+    var label = document.getElementById(idLabel);
+    label.classList.remove("map-past__label--visible");
+    var idLabelBackground = idTown + "-label-background";
+    var labelBackground = document.getElementById(idLabelBackground);
+    labelBackground.classList.remove("map-past__label-background--visible");
+  }
+</script>
+{% endif %}
+
+</body>
+</html>

@@ -1,0 +1,12 @@
+/* Buttons */
+.button {
+  border: 0;
+  border-radius: 4px;
+  box-shadow: $box-shadow;
+  background-color: $c-secondary;
+  color: $c-primary;
+  font-family: $font-default;
+  font-size: 16px;
+  padding: 10px 20px;
+  cursor: pointer;
+}

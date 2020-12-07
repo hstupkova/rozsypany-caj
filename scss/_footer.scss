@@ -1,0 +1,21 @@
+/* Footer */
+.footer {
+  background-color: $c-secondary;
+  text-align: center;
+  padding: 20px;
+}
+
+.footer__text {
+  color: $c-primary;
+
+  &--small {
+    font-size: 14px;
+    margin-top: 0.5em;
+    color: $c-primary;
+  }
+}
+
+.footer__link {
+  text-decoration: none;
+  color: $c-primary;
+}

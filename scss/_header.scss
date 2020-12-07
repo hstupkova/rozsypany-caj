@@ -1,0 +1,158 @@
+/* Header - menu */
+.header__menu {
+  background-color: $c-menu-background;
+}
+
+.header__menu-inner {
+  max-width: 1240px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.header__menu-link:not(:first-child) {
+  display: none;
+  
+  @media screen and (min-width: $bp-menu) {
+    display: block;
+  }
+}
+
+.header__menu-link {
+  font-family: $font-default;
+  color: $c-secondary;
+  font-weight: 700;
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: 15px;
+  
+  &:hover,
+  &:focus,
+  &:active {
+    color: $c-primary;
+    background-color: $c-secondary;
+  }
+}
+
+.header__menu-icon {
+  color: $c-secondary;
+  padding: 15px;
+
+  @media screen and (min-width: $bp-menu) {
+    display: none;
+  }
+}
+
+.header__menu-inner--responsive {
+  position: relative;
+  z-index: 2;                 // aby překrylo titulek
+  display: block;
+}
+
+.header__menu-inner--responsive .header__menu-icon {
+  position: absolute;
+  right: 0;
+  top: 0;
+  color: $c-primary;
+  background-color: $c-secondary;
+}
+
+.header__menu-inner--responsive .header__menu-link {
+  display: block;
+  text-align: left;
+}
+
+/* Header - background image */
+.header {
+  width: 100%;
+  height: 90vh;
+  background-size: cover;
+  background-position: 50% 50%;
+
+  position: relative;
+
+  &--bp-70 {
+    background-position: 50% 70%;
+  }
+
+  &--bp-30 {
+    background-position: 50% 30%;
+  }
+}
+
+/* Header - SVG cropping of the background image */
+.header__svg {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100px;
+}
+
+/* Header - title of the page */
+.header__title-wrapper {
+  position: absolute;     // kvůli tomu, aby se neodsouval při rozbalení menu
+  top: 50px;              // odsunutí pod menu
+  width: 100%;
+  height: calc(90vh - 50px);
+  overflow: hidden;
+}
+
+.header__title {
+  position: relative;
+  top: 15%;
+  z-index: 1;
+
+  font-family: $font-title;
+  font-size: 36px;
+  color: $c-primary;
+  text-shadow: 2px 2px 3px $c-secondary;
+  text-align: center;
+  text-transform: uppercase;
+
+  @media screen and (min-width: $bp-small) {
+    font-size: 60px;
+  }
+
+  @media screen and (min-width: $bp-large) {
+    font-size: 78px;
+  }
+}
+
+.header__subtitle {
+  font-family: $font-title;
+  font-size: 28px;
+  color: $c-primary;
+  text-shadow: 2px 2px 3px $c-secondary;
+  text-align: center;
+  text-transform: uppercase;
+
+  @media screen and (min-width: $bp-small) {
+    font-size: 48px;
+  }
+
+  @media screen and (min-width: $bp-large) {
+    font-size: 62px;
+  }
+  
+  position: relative;
+  top: 15%;
+  z-index: 1;
+  display: none;
+
+  &--visible {
+    display: block;
+  }
+}
+
+.header__title--index {
+
+  @media screen and (min-width: $bp-small) {
+    transform: translateX(9%);
+  }
+
+  @media screen and (min-width: $bp-large) {
+    transform: translateX(15%);
+  }
+}
+

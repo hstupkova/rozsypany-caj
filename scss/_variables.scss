@@ -1,0 +1,20 @@
+// Colors
+//$c-primary: #F9EAD9; o něco tmavší než nakonec vybraná
+$c-primary: #fff4e8;
+$c-secondary: #523726;
+$c-text-background: #FAFAFA;
+$c-menu-background: #FAFAFA70;
+$c-menu-background-active: #F9EAD970;
+
+// Fonts
+$font-default: 'Merriweather Sans', Helvetica, sans-serif;
+$font-title: 'Marcellus', Garamond, serif;
+
+// Shadow
+$box-shadow: 1px 1px 10px 0px rgba(82,55,38,0.54); //secondary c. + opacity
+
+// Media queries / breakpoints
+$bp-menu: 650px;    // nezalamuje se do víc řádků, vychází z velikosti písma a paddingu
+$bp-small: 576px;
+$bp-medium: 768px;
+$bp-large: 1200px;

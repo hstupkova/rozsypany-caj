@@ -1,0 +1,26 @@
+html { box-sizing: border-box; }
+*, :after, :before { box-sizing: inherit; }
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: $c-primary;
+  font-family: $font-default;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+/* Max width of the page (for 4k screens) */
+.page {
+  margin: 0 auto;
+  max-width: 2000px;
+}
+
+
+
+
+

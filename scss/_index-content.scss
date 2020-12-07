@@ -1,0 +1,61 @@
+/* Main content of the index page */
+.index-content {
+  padding: 20px;
+
+  @media screen and (min-width: $bp-large) {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.index-content__wrapper {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+
+  @media screen and (min-width: $bp-large) {
+    flex-grow: 2;
+    margin-right: 20px;
+  }
+}
+
+.index-content__about {
+  width: 100%;
+  padding: 0;
+}
+
+.index-content__articles {
+  width: 100%;
+  padding: 0;
+  margin-top: 20px;
+}
+
+.index-content__news {
+  width: 100%;
+  max-width: 800px;
+  padding: 0;
+  margin: 20px auto 0 auto;
+
+  @media screen and (min-width: $bp-large) {
+    flex-grow: 1;
+    max-width: 400px;
+    margin: 0 auto 0 20px;
+  }
+}
+
+.index-content__title {
+  font-family: $font-title;
+  font-size: 20px;
+  text-transform: uppercase;
+  text-align: center;
+  color: $c-secondary;
+  margin-bottom: 20px;
+
+  @media screen and (min-width: $bp-medium) {
+    font-size: 24px;
+  }
+
+  @media screen and (min-width: $bp-large) {
+    font-size: 28px;
+  }
+}

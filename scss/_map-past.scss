@@ -1,0 +1,96 @@
+/* SVG illustration of past trips */
+.map-past {
+  width: 100%;
+  height: auto;
+}
+
+.map-past__prefectures {
+  stroke-width: 1px;
+  stroke: #523726;
+  fill: #f9ead9;
+}
+
+.map-past__path {
+  stroke-width: 1px;
+  fill: none;              
+  stroke-linecap: round;
+
+  &--first {
+    stroke: rgb(233, 89, 64);
+  }
+
+  &--second {
+    stroke: rgb(68, 155, 255);
+  }
+
+  &--third {
+    stroke: rgb(76, 182, 76);
+  }
+
+  &--dashed {
+    stroke-dasharray: 5,5;
+  }
+}
+
+.map-past__town {
+  &--first {
+    fill: rgb(233, 89, 64);
+  }
+
+  &--second{
+    fill: rgb(68, 155, 255);
+  }
+
+  &--third {
+    fill: rgb(76, 182, 76);
+  }
+}
+
+.map-past__label-permanent {
+  font-family: $font-default;
+  font-size: 9px;
+  fill: black;
+
+  &-background {
+    font-family: $font-default;
+    font-size: 9px;
+    fill: #f9ead9;
+    stroke: #f9ead9;
+    stroke-width: 0.2em;
+  }
+}
+
+.map-past__label {
+  display: none;
+
+  font-family: $font-default;
+  font-size: 10px;
+  font-weight: 700;
+  fill: black;
+
+  &--visible {
+    display: block;
+  }
+}
+
+.map-past__label-background {
+  display: none;
+
+  font-family: $font-default;
+  font-size: 10px;
+  font-weight: 700;
+  fill: #f9ead9;
+  stroke: #f9ead9;
+  stroke-width: 0.3em;
+
+  &--visible {
+    display: block;
+  }
+}
+
+.map-past__label-legend {
+  font-family: $font-default;
+  font-size: 10px;
+  font-weight: 700;
+  fill: black;
+}

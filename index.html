@@ -1,0 +1,86 @@
+---
+layout: layouts/index.njk
+title: Rozsypaný<br>čaj
+subtitlevisible: no
+index: yes
+hero: /images/index_hero.jpg
+header: up
+---
+        <!-- Left column -->
+        <div class="index-content__wrapper">
+
+          <!-- About the page -->
+          <section class="index-content__about">
+            <h2 class="index-content__title">O stránkách</h2>
+
+            <div class="box-horizontal">
+              <div class="box-horizontal__img-wrapper">
+                <img
+                  src="/images/ostrankach.jpg"
+                  alt="Nissan March na železničním přejezdu"
+                  class="box-horizontal__img"
+                />
+              </div>
+              <div class="box-horizontal__text-wrapper">
+                <p class="box-horizontal__text">
+                  Vítejte na&nbsp;stránkách věnovaných cestování po&nbsp;Japonsku.
+                  Najdete zde povídání o&nbsp;mých cestách, praktické rady
+                  pro&nbsp;cestovatele, kteří se chtějí vydat do&nbsp;Japonska
+                  na&nbsp;vlastní pěst, a&nbsp;také tipy na místa, která nejsou
+                  v&nbsp;hledáčku průvodců a&nbsp;cestovek, a&nbsp;přesto
+                  by&nbsp;stálo za&nbsp;to je navštívit.
+                </p>
+              </div>
+            </div>
+
+          </section>
+
+          <!-- The newest articles -->
+          <section class="index-content__articles">
+            <h2 class="index-content__title">Nejnovější články</h2>
+
+            <div class="card-list-index">
+
+              {% for article in collections.articles | reverse %}
+
+                {% if loop.index <= 3 %}
+
+                  <div class="card-list-index__inner">
+                    <div class="card">
+                      <div class="card__img-wrapper">
+                        <a class="card__img-link" href="{{ article.url }}"
+                          ><img
+                            class="card__img"
+                            src="/images/{{ article.fileSlug }}_card.jpg"
+                            alt="{{ article.data.title }}"
+                            height="250px"
+                            width="250px"
+                        /></a>
+                      </div>
+                      <div class="card__text-wrapper">
+                        <a href="{{ article.url }}" class="card__title">{{ article.data.title }}</a>
+                        <p class="card__date">{{ article.data.subtitle | safe }}{% if article.data.subtitlevisible==='no' %}&nbsp; | safe {% endif %}</p>
+                      </div>
+                    </div>
+                  </div>
+
+                {% endif %}
+              {% endfor %}
+
+            </div>
+          </section>
+        </div>
+
+        <!-- Site news -->
+        <section class="index-content__news">
+          <h2 class="index-content__title">Novinky na&nbsp;stránkách</h2>
+          <div class="news">
+            {% for data in news | reverse %}
+              <h3 class="news__date">{{ data.date }}</h3>
+              <p class="news__text">{{ data.text | safe }}</p>
+            {% endfor %}
+          </div>
+        </section>
+
+
+

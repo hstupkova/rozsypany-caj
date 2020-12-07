@@ -1,0 +1,96 @@
+{% include "partials/page-top.njk" %}
+
+      <!-- Main content -->
+      <main class="page-content">
+        <div class="page-content__inner">
+          <section class="page-content__navigation">
+            <ul class="navigation">
+              <li class="navigation__item {% if before==='no' %}navigation__item--hidden{% endif %}"><a href="{{ beforelink }}"><i class="fas fa-angle-double-left"></i> {{ before }}</a></li>
+              <li class="navigation__item {% if after==='no' %}navigation__item--hidden{% endif %}"><a href="{{ afterlink }}">{{ after }} <i class="fas fa-angle-double-right"></i></a></li>
+            </ul>
+          </section>
+
+            {{ content | safe }}
+
+          <section class="page-content__navigation">
+            <ul class="navigation">
+              <li class="navigation__item {% if before==='no' %}navigation__item--hidden{% endif %}"><a href="{{ beforelink }}"><i class="fas fa-angle-double-left"></i> {{ before }}</a></li>
+              <li class="navigation__item"><a href="{{ backlink }}"><i class="fas fa-angle-double-up"></i> {{ back }}</a></li>
+              <li class="navigation__item {% if after==='no' %}navigation__item--hidden{% endif %}"><a href="{{ afterlink }}">{{ after }} <i class="fas fa-angle-double-right"></i></a></li>
+            </ul>
+          </section>
+
+          <section class="page-content__commentbox">
+            <!-- customize labels of htmlcommentbox.com -->
+            <script>
+              /* This code goes ABOVE the main HTML Comment Box code!
+              replace the text in the single quotes below to customize labels.*/
+              hcb_user = {
+                  /* L10N */
+                  comments_header : 'Komentáře',
+                  name_label : 'Jméno',
+                  content_label: 'Váš komentář',
+                  submit : 'Odeslat',
+                  logout_link : '<img title="log out" src="https://www.htmlcommentbox.com/static/images/door_out.png" alt="[Odhlásit]" class="hcb-icon hcb-door-out"/>',
+                  admin_link : '<img src="https://www.htmlcommentbox.com/static/images/door_in.png" alt="[Přihlásit]" class="hcb-icon hcb-door-in"/>',
+                  no_comments_msg: 'Zatím zde nikdo nic nenapsal. Buďte první!',
+                  add:'Přidat komentář',
+                  again: 'Přidat další komentář',
+                  rss:'<img src="https://www.htmlcommentbox.com/static/images/feed.png" class="hcb-icon" alt="rss"/> ',
+                  said:'napsal/a:',
+                  prev_page:'<img src="https://www.htmlcommentbox.com/static/images/arrow_left.png" class="hcb-icon" title="předchozí stránka" alt="[předchozí]"/>',
+                  next_page:'<img src="https://www.htmlcommentbox.com/static/images/arrow_right.png" class="hcb-icon" title="další stránka" alt="[další]"/>',
+                  showing:'Showing',
+                  to:'to',
+                  website_label:'Rozsypaný čaj',
+                  email_label:'Email',
+                  anonymous:'Anonymní',
+                  mod_label:'(mod)',
+                  subscribe:'Poslat odpovědi na email',
+                  add_image:'Přidat obrázek',
+                  are_you_sure:'Opravdu chcete označit tento komentář jako nevhodný?',
+              
+                  reply:'<img src="https://www.htmlcommentbox.com/static/images/reply.png"/> Odpovědět',
+                  flag:'<img src="https://www.htmlcommentbox.com/static/images/flag.png"/> Označit jako nevhodné',
+                  like:'<img src="https://www.htmlcommentbox.com/static/images/like.png"/> To se mi líbí',
+              
+                  /* dates */
+                  days_ago:'days ago',
+                  hours_ago:'hours ago',
+                  minutes_ago:'minutes ago',
+                  within_the_last_minute:'within the last minute',
+              
+                  msg_thankyou:'Děkuji za komentář!',
+                  msg_approval:'(tento komentář nebude publikován, dokud ho admin neschválí)',
+                  msg_approval_required:'Díky za komentář! Komentář se objeví na stránce, jakmile bude schválen moderátorem.',
+              
+                  err_bad_html:'Váš komentář obsahuje nevhodné HTML.',
+                  err_bad_email:'Prosím vložte validní emailovou adresu.',
+                  err_too_frequent:'Před odesláním dalšího komentáře počkejte několik sekund.',
+                  err_comment_empty:'Váš komentář nebyl odeslán, protože neobsahoval žádný text.',
+                  err_denied:'Váš komentář nebyl schválen',
+                  err_unknown:'Váš komentář byl z neznámého důvodu zablokován, kontaktujte prosím admina.',
+                  err_spam:'Váš komentář byl označen jako spam.',
+                  err_blocked:'Váš komentář nesplňuje podmínky používání stránek.',
+              
+                  /* SETTINGS */
+                  MAX_CHARS: 8192,
+                  PAGE:'', /* ID of the webpage to show comments for. defaults to the webpage the user is currently visiting. */
+                  ON_COMMENT: function(){}, /* Function to call after commenting. */
+                  RELATIVE_DATES:false /* show dates in the form "X hours ago." etc. */
+              };
+              </script>
+            <!-- done customizing labels of htmlcommentbox.com -->
+            <!-- begin wwww.htmlcommentbox.com -->
+            <div id="HCB_comment_box">
+              <a href="http://www.htmlcommentbox.com">Comment Box</a> is loading comments...
+            </div>
+            <script type="text/javascript" id="hcb"> /*<!--*/ if(!window.hcb_user){hcb_user={};} (function(){var s=document.createElement("script"), l=hcb_user.PAGE || (""+window.location).replace(/'/g,"%27"), h="https://www.htmlcommentbox.com";s.setAttribute("type","text/javascript");s.setAttribute("src", h+"/jread?page="+encodeURIComponent(l).replace("+","%2B")+"&mod=%241%24wq1rdBcg%24SVYcZWY6Idz7VNPabXblJ1"+"&opts=16862&num=10&ts=1607251793790");if (typeof s!="undefined") document.getElementsByTagName("head")[0].appendChild(s);})(); /*-->*/ </script>
+            <!-- end www.htmlcommentbox.com -->
+          </section>
+
+        </div>
+
+      </main>
+
+{% include "partials/page-bottom.njk" %}

@@ -1,0 +1,29 @@
+/* Navigation links in articles */
+.navigation {
+  padding: 0;
+
+  @media screen and (min-width: $bp-small) {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.navigation__item {
+  list-style-type: none;
+  font-size: 18px;
+  font-weight: 700;
+
+  & a {
+    color: $c-secondary;
+    text-decoration: none;
+  }
+}
+
+.navigation__item--hidden {
+  display: none;
+
+  @media screen and (min-width: $bp-small) {
+    display: block;
+    visibility: hidden;
+  }
+}
