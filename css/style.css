@@ -29,7 +29,7 @@ body {
 
 /* Header - menu */
 .header__menu {
-  background-color: #FAFAFA70;
+  background-color: #FAFAFA98;
 }
 
 .header__menu-inner {
@@ -139,7 +139,7 @@ body {
   font-family: "Marcellus", Garamond, serif;
   font-size: 36px;
   color: #fff4e8;
-  text-shadow: 2px 2px 3px #523726;
+  text-shadow: -3px -3px 3px #523726, 3px -3px 3px #523726, -3px 3px 3px #523726, 3px 3px 3px #523726;
   text-align: center;
   text-transform: uppercase;
 }
@@ -160,7 +160,7 @@ body {
   font-family: "Marcellus", Garamond, serif;
   font-size: 28px;
   color: #fff4e8;
-  text-shadow: 2px 2px 3px #523726;
+  text-shadow: -3px -3px 3px #523726, 3px -3px 3px #523726, -3px 3px 3px #523726, 3px 3px 3px #523726;
   text-align: center;
   text-transform: uppercase;
   position: relative;

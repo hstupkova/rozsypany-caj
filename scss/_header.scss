@@ -106,7 +106,11 @@
   font-family: $font-title;
   font-size: 36px;
   color: $c-primary;
-  text-shadow: 2px 2px 3px $c-secondary;
+  text-shadow:
+    -3px -3px 3px $c-secondary,  
+    3px -3px 3px $c-secondary,
+    -3px 3px 3px $c-secondary,
+    3px 3px 3px $c-secondary;
   text-align: center;
   text-transform: uppercase;
 
@@ -123,7 +127,11 @@
   font-family: $font-title;
   font-size: 28px;
   color: $c-primary;
-  text-shadow: 2px 2px 3px $c-secondary;
+  text-shadow:
+    -3px -3px 3px $c-secondary,  
+    3px -3px 3px $c-secondary,
+    -3px 3px 3px $c-secondary,
+    3px 3px 3px $c-secondary;
   text-align: center;
   text-transform: uppercase;
 
