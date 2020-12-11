@@ -4,6 +4,7 @@ title: Tokyo
 subtitle: 12.–15.&nbsp;10.&nbsp;2011
 subtitlevisible: yes
 index: no
+border: yes
 hero: /images/tokyo_hero.JPG
 header: up
 before: Takayama

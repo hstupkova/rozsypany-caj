@@ -4,6 +4,7 @@ title: Matsumoto
 subtitle: 2.–5.&nbsp;10.&nbsp;2011
 subtitlevisible: yes
 index: no
+border: yes
 hero: /images/matsumoto_hero.jpg
 header: up
 before: Kyoto

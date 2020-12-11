@@ -45,8 +45,8 @@
 
         <!-- Title of the page -->
         <div class="header__title-wrapper">
-          <h1 class="header__title {% if index==='yes' %}header__title--index{% endif %}">{{ title | safe }}</h1>
-          <h2 class="header__subtitle {% if subtitlevisible==='yes' %}header__subtitle--visible{% endif %}">{{ subtitle | safe }}</h2>
+          <h1 class="header__title {% if index==='yes' %}header__title--index{% endif %} {% if border==='yes' %}header__title--border{% endif %}">{{ title | safe }}</h1>
+          <h2 class="header__subtitle {% if subtitlevisible==='yes' %}header__subtitle--visible{% endif %} {% if border==='yes' %}header__subtitle--border{% endif %}">{{ subtitle | safe }}</h2>
         </div>
 
         <svg class="header__svg" viewbox="0 0 1000 100" preserveaspectratio="none">

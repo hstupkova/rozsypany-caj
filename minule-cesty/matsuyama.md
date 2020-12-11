@@ -4,6 +4,7 @@ title: Matsuyama
 subtitle: 20.–21.&nbsp;9.&nbsp;2011
 subtitlevisible: yes
 index: no
+border: yes
 hero: /images/matsuyama_hero.jpg
 header: down
 before: Miyajima

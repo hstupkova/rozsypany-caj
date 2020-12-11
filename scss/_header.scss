@@ -66,6 +66,7 @@
 .header {
   width: 100%;
   height: 90vh;
+
   background-size: cover;
   background-position: 50% 50%;
 
@@ -106,11 +107,7 @@
   font-family: $font-title;
   font-size: 36px;
   color: $c-primary;
-  text-shadow:
-    -3px -3px 3px $c-secondary,  
-    3px -3px 3px $c-secondary,
-    -3px 3px 3px $c-secondary,
-    3px 3px 3px $c-secondary;
+  text-shadow: 2px 2px 3px $c-secondary;
   text-align: center;
   text-transform: uppercase;
 
@@ -127,11 +124,7 @@
   font-family: $font-title;
   font-size: 28px;
   color: $c-primary;
-  text-shadow:
-    -3px -3px 3px $c-secondary,  
-    3px -3px 3px $c-secondary,
-    -3px 3px 3px $c-secondary,
-    3px 3px 3px $c-secondary;
+  text-shadow: 2px 2px 3px $c-secondary;
   text-align: center;
   text-transform: uppercase;
 
@@ -162,5 +155,14 @@
   @media screen and (min-width: $bp-large) {
     transform: translateX(15%);
   }
+}
+
+.header__title--border,
+.header__subtitle--border {
+  text-shadow:
+    -3px -3px 3px $c-secondary,  
+    3px -3px 3px $c-secondary,
+    -3px 3px 3px $c-secondary,
+    3px 3px 3px $c-secondary;
 }
 

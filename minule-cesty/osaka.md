@@ -4,6 +4,7 @@ title: Osaka
 subtitle: 25.–26.&nbsp;9.&nbsp;2011
 subtitlevisible: yes
 index: no
+border: yes
 hero: /images/osaka_hero.jpg
 header: up
 before: Tokushima
