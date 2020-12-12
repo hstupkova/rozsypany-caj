@@ -14,17 +14,18 @@ html {
 }
 
 body {
-  background-color: #fff4e8;
-  font-family: "Merriweather Sans", Helvetica, sans-serif;
-  font-weight: 300;
-  font-size: 16px;
-  line-height: 1.5;
+  background-color: #FAFAFA;
 }
 
 /* Max width of the page (for 4k screens) */
 .page {
   margin: 0 auto;
   max-width: 2000px;
+  background-color: #fff4e8;
+  font-family: "Merriweather Sans", Helvetica, sans-serif;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 1.5;
 }
 
 /* Header - menu */
@@ -469,6 +470,11 @@ body {
   }
 }
 
+.box-horizontal__link {
+  text-decoration: none;
+  color: #523726;
+}
+
 .box-horizontal__img-wrapper {
   width: 100%;
   height: 100%;
@@ -538,11 +544,6 @@ body {
   margin-bottom: 0.8em;
 }
 
-.box-horizontal__title a {
-  color: #523726;
-  text-decoration: none;
-}
-
 /* Layout of the newest articles on the index page */
 .card-list-index {
   display: -webkit-box;
@@ -604,6 +605,10 @@ body {
   background-color: #FAFAFA;
 }
 
+.card__link {
+  text-decoration: none;
+}
+
 .card__img {
   max-width: 100%;
   width: auto;
@@ -619,10 +624,9 @@ body {
   color: #523726;
   font-size: 18px;
   font-weight: 700;
-  text-decoration: none;
 }
 
-.card__date {
+.card__subtitle {
   color: #523726;
   font-size: 14px;
 }

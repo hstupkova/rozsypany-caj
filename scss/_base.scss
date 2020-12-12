@@ -7,17 +7,18 @@ html { box-sizing: border-box; }
 }
 
 body {
-  background-color: $c-primary;
-  font-family: $font-default;
-  font-weight: 300;
-  font-size: 16px;
-  line-height: 1.5;
+  background-color: $c-text-background;
 }
 
 /* Max width of the page (for 4k screens) */
 .page {
   margin: 0 auto;
   max-width: 2000px;
+  background-color: $c-primary;
+  font-family: $font-default;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 1.5;
 }
 
 

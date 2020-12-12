@@ -483,20 +483,21 @@ header: center
     {% for trip in collections.firsttrip %}
 
     <div class="card">
-      <div class="card__img-wrapper">
-        <a class="card__img-link" href="{{ trip.url }}"
-          ><img
+      <a class="card__link" href="{{ trip.url }}">
+        <div class="card__img-wrapper">
+          <img
             class="card__img"
             src="/images/{{ trip.fileSlug }}_card.jpg"
             alt="{{ trip.data.title }}"
             height="250px"
             width="250px"
-        /></a>
-      </div>
-      <div class="card__text-wrapper">
-        <a href="{{ trip.url }}" class="card__title">{{ trip.data.title }}</a>
-        <p class="card__date">{{ trip.data.subtitle | safe }}</p>
-      </div>
+          />
+        </div>
+        <div class="card__text-wrapper">
+          <h3 class="card__title">{{ trip.data.title }}</h3>
+          <p class="card__subtitle">{{ trip.data.subtitle | safe }}</p>
+        </div>
+      </a>
     </div>
 
     {% endfor %}

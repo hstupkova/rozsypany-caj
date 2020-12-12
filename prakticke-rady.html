@@ -12,19 +12,21 @@ header: center
           
 {% for tip in collections.tips %}
 <section class="page-content__box">
-  <div class="box-horizontal {% if loop.index % 2 === 0 %}box-horizontal--reverse{% endif %}">
-    <div class="box-horizontal__img-wrapper"><a href="{{ tip.url }}">
-      <img
-        src="/images/{{ tip.fileSlug }}_box.jpg"
-        alt="{{ tip.data.title }}"
-        class="box-horizontal__img"
-      /></a>
+  <a href="{{ tip.url }}" class="box-horizontal__link">
+    <div class="box-horizontal {% if loop.index % 2 === 0 %}box-horizontal--reverse{% endif %}">
+      <div class="box-horizontal__img-wrapper">
+        <img
+          src="/images/{{ tip.fileSlug }}_box.jpg"
+          alt="{{ tip.data.title }}"
+          class="box-horizontal__img"
+        />
+      </div>
+      <div class="box-horizontal__text-wrapper">
+        <h2 class="box-horizontal__title">{{ tip.data.title }}</h2>
+        <p class="box-horizontal__text">{{ tip.data.perex | safe }}</p>
+      </div>
     </div>
-    <div class="box-horizontal__text-wrapper">
-      <h2 class="box-horizontal__title"><a href="{{ tip.url }}">{{ tip.data.title }}</a></h2>
-      <p class="box-horizontal__text">{{ tip.data.perex | safe }}</p>
-    </div>
-  </div>
+  </a>
 </section>
 {% endfor %}
 

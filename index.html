@@ -47,20 +47,21 @@ header: up
 
                   <div class="card-list-index__inner">
                     <div class="card">
-                      <div class="card__img-wrapper">
-                        <a class="card__img-link" href="{{ article.url }}"
-                          ><img
+                      <a href="{{ article.url }}" class="card__link">
+                        <div class="card__img-wrapper">
+                          <img
                             class="card__img"
                             src="/images/{{ article.fileSlug }}_card.jpg"
                             alt="{{ article.data.title }}"
                             height="250px"
                             width="250px"
-                        /></a>
-                      </div>
-                      <div class="card__text-wrapper">
-                        <a href="{{ article.url }}" class="card__title">{{ article.data.title }}</a>
-                        <p class="card__date">{{ article.data.subtitle | safe }}{% if article.data.subtitlevisible==='no' %}&nbsp; | safe {% endif %}</p>
-                      </div>
+                        />
+                        </div>
+                        <div class="card__text-wrapper">
+                          <h3 class="card__title">{{ article.data.title }}</h3>
+                          <p class="card__subtitle">{{ article.data.subtitle | safe }}{% if article.data.subtitlevisible==='no' %}&nbsp; | safe {% endif %}</p>
+                        </div>
+                      </a>
                     </div>
                   </div>
 

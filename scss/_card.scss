@@ -4,6 +4,10 @@
   background-color: $c-text-background;
 }
 
+.card__link {
+  text-decoration: none;
+}
+
 .card__img {
   max-width: 100%;
   width: auto;
@@ -19,10 +23,9 @@
   color: $c-secondary;
   font-size: 18px;
   font-weight: 700;
-  text-decoration: none;
 }
 
-.card__date {
+.card__subtitle {
   color: $c-secondary;
   font-size: 14px;
 }
