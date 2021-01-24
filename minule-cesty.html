@@ -324,7 +324,9 @@ header: center
           />
         </g>
         <g id="second-trip-towns">
-          <use xlink:href="#town" x="232.18134" y="252.86047" id="Narita" class="map-past__town map-past__town--second" />
+          <a href="/minule-cesty/narita/">
+            <use xlink:href="#town" x="232.18134" y="252.86047" id="Narita" class="map-past__town map-past__town--second" />
+          </a>
           <use xlink:href="#town" x="252.61876" y="66.77816" id="Sapporo1" class="map-past__town map-past__town--second" />
           <use xlink:href="#town" x="282.99265" y="50.405628" id="Daisetsuzan" class="map-past__town map-past__town--second" />
           <use xlink:href="#town" x="276.44363" y="58.761265" id="Furano" class="map-past__town map-past__town--second" />
@@ -520,6 +522,32 @@ header: center
     cesty jsme strávili cestou na&nbsp;jih do&nbsp;Tokia se&nbsp;zastávkou
     na&nbsp;největším tóhockém matsuri v&nbsp;Aomori.
   </p>
+</section>
+
+<section class="page-content__card-list">
+  <div class="card-list-grid">
+    {% for trip in collections.secondtrip %}
+
+    <div class="card">
+      <a class="card__link" href="{{ trip.url }}">
+        <div class="card__img-wrapper">
+          <img
+            class="card__img"
+            src="/images/{{ trip.fileSlug }}_card.jpg"
+            alt="{{ trip.data.title }}"
+            height="250px"
+            width="250px"
+          />
+        </div>
+        <div class="card__text-wrapper">
+          <h3 class="card__title">{{ trip.data.title }}</h3>
+          <p class="card__subtitle">{{ trip.data.subtitle | safe }}</p>
+        </div>
+      </a>
+    </div>
+
+    {% endfor %}
+  </div>
 </section>
 
 <section class="page-content__text">

@@ -81,6 +81,18 @@
   }
 }
 
+.page-content__img-small {
+  display: inline-block;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: 40px;
+  
+  &:last-child {
+    margin-bottom: 20px;
+  }
+}
+
 .page-content__img-vertical {
   max-width: 550px;
   margin-left: auto;

@@ -369,6 +369,19 @@ body {
   margin-bottom: 20px;
 }
 
+.page-content__img-small {
+  display: inline-block;
+  position: relative;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  margin-top: 40px;
+}
+
+.page-content__img-small:last-child {
+  margin-bottom: 20px;
+}
+
 .page-content__img-vertical {
   max-width: 550px;
   margin-left: auto;
@@ -709,6 +722,13 @@ body {
   width: 100%;
   height: auto;
   display: block;
+}
+
+.figure--small img {
+  width: auto;
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .figure__caption {
