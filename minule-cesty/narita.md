@@ -124,7 +124,7 @@ Zpátky jsme se vraceli oklikou ulicí Denshamichi, kde jsme narazili jeden z ne
 
 <section class="page-content__img-small">
   <figure class="figure figure--small">
-    <img src="/images/narita_hrbitov.PNG" alt="hřbitov na mostě" width="547px" height="411px">
+    <img src="/images/narita_hrbitov.png" alt="hřbitov na mostě" width="547px" height="411px">
     <figcaption class="figure__caption">Hřbitov na mostě</figcaption>
   </figure>
 </section>
