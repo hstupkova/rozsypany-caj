@@ -59,7 +59,7 @@ header: up
                         </div>
                         <div class="card__text-wrapper">
                           <h3 class="card__title">{{ article.data.title }}</h3>
-                          <p class="card__subtitle">{{ article.data.subtitle | safe }}{% if article.data.subtitlevisible==='no' %}&nbsp; | safe {% endif %}</p>
+                          <p class="card__subtitle">{{ article.data.subtitle | safe }}{% if article.data.subtitlevisible==='no' %}&nbsp;{% endif %}</p>
                         </div>
                       </a>
                     </div>
